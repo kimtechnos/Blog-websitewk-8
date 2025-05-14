@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">My Blog</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="featured-post">
+        <article class="post-card large">
+          <img src="images/featured-post.jpg" alt="Featured Post" />
+          <div class="post-content">
+            <span class="category">Technology</span>
+            <h2><a href="post.html">The Future of Web Development</a></h2>
+            <p class="excerpt">
+              Exploring the latest trends and technologies shaping the future of
+              web development in 2023...
+            </p>
+            <div class="post-meta">
+              <span class="author">Francis kimani</span>
+              <span class="date">May 5, 2025</span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="recent-posts">
+        <h2 class="section-title">Recent Posts</h2>
+        <div class="posts-grid" id="postsContainer">
+          <!--  JavaScript post -->
+        </div>
+        <button id="loadMore" class="btn">Load More</button>
+      </section>
+      <section class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form id="newsletterForm">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              My Blog is a platform for sharing thoughts, ideas, and knowledge
+              about technology, lifestyle, and more.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 My Blog. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
