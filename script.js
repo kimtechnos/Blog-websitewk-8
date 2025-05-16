@@ -122,18 +122,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(email);
     }
-  });  //NEWSLETTER FORM
+  }); //NEWSLETTER FORM
   const newsLetterForm = this.getElementById("newsletterForm");
   if (newsLetterForm) {
-    newsLetterForm.addEventListener('submit', function (e){
-        e.preventDefault();
-        const emailInput = this.querySelector('input');
-        const email = emailInput.value.trim();
-        
-        if(email){
-            alert(`Thankyou for subscribing with ${email}!`);
-            emailInput.value = '';//clear the input
-        }
+    newsLetterForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = this.querySelector("input");
+      const email = emailInput.value.trim();
+
+      if (email) {
+        alert(`Thankyou for subscribing with ${email}!`);
+        emailInput.value = ""; //clear the input
+      }
     });
   }
   // BACK TOP BUTTON
@@ -155,6 +155,4 @@ document.addEventListener("DOMContentLoaded", function () {
   backToTopButton.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-
-  
 });

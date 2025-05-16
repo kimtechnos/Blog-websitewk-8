@@ -179,13 +179,13 @@ nav ul li a:hover {
   height: 3px;
   background: var(--primary-color);
 }
- .post-grid {
+.post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
-} 
-  
+}
+
 .post-card {
   min-width: 280px;
   background: white;
@@ -202,7 +202,9 @@ nav ul li a:hover {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 .post-card:hover img {
   transform: scale(1.05);
@@ -213,7 +215,6 @@ nav ul li a:hover {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #333;
-
 }
 .post-card .post-content p.excerpt {
   color: #666;
@@ -317,7 +318,7 @@ footer {
   cursor: pointer;
   display: none; /* hidden until scrolled */
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
 }
 
@@ -379,4 +380,74 @@ footer {
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
+}
+/*About page  styles*/
+.about-section {
+  margin: 40px;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.about-image {
+  width: 85%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.3s ease;
+  filter: brightness(0.98) contrast(1.05);
+}
+.about-image:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  filter: brightness(1) contrast(1.08);
+}
+.about-text p {
+  margin-bottom: 20px;
+}
+.team-section h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.team-member {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid var(--light-color);
+}
+.team-member h4 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: var(--dark-color);
+}
+.team-member p {
+  color: #666;
+  font-size: 14px;
 }
