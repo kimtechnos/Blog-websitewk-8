@@ -174,4 +174,27 @@ document.addEventListener("DOMContentLoaded", function () {
   //update coptyright year automatically
   document.querySelector(".copyright p").innerHTML =
     `&copy; ${new Date().getFullYear()}My Blog. All rights reserved.`;
+
+  //contact us form
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Get form values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      // In a real application, you would send this data to a server
+      console.log("Form submitted:", { name, email, message });
+
+      // Show success message
+      alert(
+        `Thank you, ${name}! Your message has been sent. We'll get back to you soon.`,
+      );
+
+      // Reset form
+      this.reset();
+    });
 });
