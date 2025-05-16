@@ -155,4 +155,23 @@ document.addEventListener("DOMContentLoaded", function () {
   backToTopButton.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  //about page AND hover effect to team members
+  // Add hover effects to team members
+  const teamMembers = document.querySelectorAll(".team-member");
+
+  teamMembers.forEach((member) => {
+    member.addEventListener("mouseenter", () => {
+      member.style.transform = "translateY(-5px)";
+      member.style.boxShadow = "0 10px 20px rgba(0,0,0,0.1)";
+    });
+
+    member.addEventListener("mouseleave", () => {
+      member.style.transform = "translateY(0)";
+      member.style.boxShadow = "0 5px 15px rgba(0,0,0,0.05)";
+    });
+  });
+  //update coptyright year automatically
+  document.querySelector(".copyright p").innerHTML =
+    `&copy; ${new Date().getFullYear()}My Blog. All rights reserved.`;
 });
